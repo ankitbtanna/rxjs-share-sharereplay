@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { AppService } from './app.service';
+import { Observable, startWith } from 'rxjs';
+import { UsersRespose } from './app.model';
 
 @Component({
   selector: 'rxjs-share-sharereplay-root',
@@ -6,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'rxjs-share-sharereplay';
+  title = 'RxJS: share vs shareReplay';
 }

@@ -1,0 +1,30 @@
+:host {
+    display: flex;
+    border: 1px solid red;
+    flex-direction: row;
+    flex: 1;
+
+    .examples {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        border: 1px solid red;
+
+        a {
+            height: 30px;
+            border: 3px solid #ccc;
+            text-decoration: none;
+
+            &:hover {
+                background-color: #ccc;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .output {
+        display: flex;
+        flex: 2;
+        border: 1px solid red;
+    }
+}
