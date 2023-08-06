@@ -1,0 +1,33 @@
+{
+  "name": "rxjs-share-sharereplay-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/rxjs-share-sharereplay-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/rxjs-share-sharereplay-e2e/cypress.config.ts",
+        "devServerTarget": "rxjs-share-sharereplay:serve:development",
+        "testingType": "e2e"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "rxjs-share-sharereplay:serve:production"
+        },
+        "ci": {
+          "devServerTarget": "rxjs-share-sharereplay:serve-static"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/rxjs-share-sharereplay-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["rxjs-share-sharereplay"]
+}
