@@ -1,5 +1,11 @@
 <h2>Number of users: {{(users$ | async)!.users.length}}</h2>
 
+<h2>Number of users: {{(users$ | async)!.users | json}}</h2>
+
+<h2>Number of users via count$: {{count$ | async}}</h2>
+
+<h2>Average age: {{averageAge$ | async}}</h2>
+
 <table>
     <tr>
         <th>First Name</th>
